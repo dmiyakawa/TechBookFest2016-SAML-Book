@@ -1,0 +1,12 @@
+PREDEF:
+  - preface.re
+
+CHAPS:
+  - shibboleth3.re
+  - installing-shibboleth3.re
+  - kantara.re
+
+APPENDIX:
+
+POSTDEF:
+
