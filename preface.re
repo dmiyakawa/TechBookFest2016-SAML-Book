@@ -2,31 +2,20 @@
 
 この度は『もわねっとのSAML同人誌』を手にとっていただき、本当にありがとうございます！！
 
-本書では、SAML（Security Assertion Markup Language）について、2016年6月中旬頃の情報をもとに色々書いていきます。「SAMLって何？」という方向けに第一章に「SAML入門」を設けましたので、もしご興味があればそれだけでも是非御覧いただければと思います。
+本書では、SAML（Security Assertion Markup Language）について、2016年6月中旬頃の情報をもとに書いていきます。
 
-2章以降の主眼は、SAMLのIdPの一実装であるShibboleth IdP、特にVersion3となります@<fn>{maybe_nextime}。この度、メジャーバージョンが2から3に上がって、一部の界隈で盛り上がっていたようです。今回、自分で検証サーバ等をアップデートした際に引っかかったポイントや、各所で拾ったベスト・プラクティスのような情報をメインに書いていきます。また、勝手ですが筆者の都合で、内容は結構「学認」に偏った話が多いです。
+1章では「SAMLって何だっけ？」と称してSAML入門的なことを書きます。SAML自体をご存じない方も、もしご興味があれば是非同章を御覧いただければと思います。
 
-//footnote[maybe_nextime][次回があるかのような煽り]
+2章では、メジャーバージョンが上がったShibboleth IdP v3について書きます。自分で検証サーバ等をアップデートした際に引っかかったポイントや、各所で拾ったベスト・プラクティス的な情報を書いていきつつ、気になった点を考えていきます。
 
-== 参考にした情報ソース等
+書名に「SAML」と入れながらも、全体的に「学認」@<fn>{about_gakunin}に偏った話になってますが、ご容赦くださいませ。
 
-本書ではあくまで筆者の理解・見解を書いていきますが、「学認」のWebサイトやその関係イベントでの発表、またそこでの質疑応答を通じて得た情報等も記述しています。以下に、特に参考にした代表的な情報源を示します。
+//footnote[about_gakunin][「学術認証フェデレーション」略して「学認」。主に大学と大学にオンラインサービスを提供する際にSAML連携を推進するNIIの事業です。SAML関連の技術情報が豊富で助かっています。@<href>{https://www.gakunin.jp/}]
 
- * @<href>{https://meatwiki.nii.ac.jp/confluence/display/GakuNinShare/Shibboleth+IdP+3}
- * @<href>{http://www.nii.ac.jp/csi/openforum2016/track/day3_4.html}
- * @<href>{http://memo.itc.keio.ac.jp/blog/?p=474}
- * @<href>{https://www.gakunin.jp/ml-archives/upki-fed/}
+== 文責・お問い合わせについて
 
-元情報の方が詳しかったり、本書発行後に事情が変わった場合に本Webサイトの方が情報が豊富になったり、ということは起こると思いますので、気になったらブラウザを開きながら御覧ください。
+文章内容の全責任は筆者（@amedama@<fn>{amedama}）にあります。
 
+//footnote[amedama][@<href>{https://twitter.com/amedama}]
 
-== お問い合わせ先等
-
-文章内容の全責任は筆者（@amedama @<href>{https://twitter.com/amedama}）にあります。
-
-本書のソースコードは@<href>{https://github.com/dmiyakawa/TechBookFest2016-SAML-Book}にて公開予定です。
-もし内容に気になる点がありましたら気軽にIssueやPull Requestをお願いします。@<fn>{please_buy_this}
-
-
-//footnote[please_buy_this][つ、つまり「電子データでいいよ」という方は紙の書籍は買わなくても良いわけですけれども……、是非この機会ですので、興味を持たれましたら購入をご検討いただきたく……（懇願）]
-
+本書のソースコードは@<href>{https://github.com/dmiyakawa/TechBookFest2016-SAML-Book}にて公開予定です。もし内容に気になる点がありましたら気軽にIssueやPull Requestをお願いします。
