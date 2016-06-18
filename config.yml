@@ -274,7 +274,9 @@ epubmaker:
   # epubmaker:階層を使うものはここまで
 
 # LaTeX用のスタイルファイル(styディレクトリ以下に置くこと)
-texstyle: reviewmacro
+# texstyle: reviewmacro
+texstyle: techbooster-doujin
+
 #
 # LaTeX用のdocumentclassを指定する
 # texdocumentclass: ["jsbook", "uplatex,oneside"]
